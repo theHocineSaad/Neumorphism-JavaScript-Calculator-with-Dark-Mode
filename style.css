@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css?family=Nova+Round&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(-45deg, #FA8BFF, #2BD2FF, #FFE53B,#FF2525, #FBDA61);
+	background-size: 800% 800%;
+	animation: gradient 40s ease infinite;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+.nightModeToggle{
+    width: 60px;
+    height: 30px;   
+    background-color: white;
+    margin-bottom: 10px;
+    border-radius: 500px;
+    box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 9px;
+    position: relative;
+    cursor: pointer;
+    transition: background-color .5s ease-in-out;
+}
+
+.nightModeToggleNM{
+    background: #373737;
+}
+
+.nightModeToggle svg{
+    width: 15px;
+    height: 15px;
+}
+
+.switch{
+    width: 20px;
+    height: 20px;
+    background-color: #373737;
+    border-radius: 500px;
+    position: absolute;
+    left: 6px;
+    transition: left 0.5s ease-in-out, background-color 0.5s ease-in-out;
+}
+
+.switchNM{
+    left: 33px;
+    background-color: white;
+}
+
+.calculator{
+    min-width: 273px;
+    min-height: 448px;
+
+
+    background: #EBECF1;
+    box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.15);
+    border-radius: 24px;
+
+    font-family: Nova Round;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 29px;
+    transition: background-color .5s ease-in-out, box-shadow .5s ease-in-out;
+}
+
+.screen{
+    width: 233px;
+    height: 91px;
+    background-color: #EBECF1;
+    box-shadow: inset 1.5px 1.5px 3px #CBCBCB, inset -1.5px -1.5px 3px #FFFFFF;
+    border-radius: 24px 24px 10px 10px;
+    margin: 20px 20px 20px 20px;
+    transition: background-color .5s ease-in-out, box-shadow .5s ease-in-out;
+}
+
+.screenContent{
+    text-align: end;
+    padding: 17px;
+    font-size: 30px;
+}
+
+#result{
+    font-size: 30px;
+    line-height: 36px;
+    margin-bottom: 5px;
+    overflow: auto;
+    user-select: all;
+}
+
+#resultText{
+    transition: color .5s ease-in-out;
+}
+
+.resultTextNM{
+   color: #F7B731 !important;
+}
+
+
+.tooltip {
+    position: fixed;
+    height: fit-content;
+    width: fit-content;
+    background-color: white;
+    padding: 5px 12px;
+    border-radius: 5px;
+    font-family: Nova Round;
+    display: none;
+    font-size: 20px;
+    font: icon;
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.15);
+}
+
+.calculation{
+    font-size: 12px;
+    line-height: 14px;
+    color: rgb(153, 153, 153);
+    overflow: auto;
+    transition: color .5s ease-in-out;
+}
+
+.calculationNM{
+    color: white;
+}
+
+.numPad{
+    width: 233px;
+    height: 296px;
+    margin: 20px 20px 20px 20px;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-column-gap: 19px;
+    grid-row-gap: 19px;
+
+    
+}
+
+.style{
+    box-shadow: 4.5px 4.5px 9px #CBCBCB,
+                -4.5px -4.5px 9px #FFFFFF;
+    border-radius: 500px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color .5s ease-in-out, box-shadow .5s ease-in-out, color .5s ease-in-out;
+}
+
+.styleOnClick{
+    box-shadow: inset 2px 2px 4px #CBCBCB,
+                inset -2px -2px 4px #FFFFFF;
+    font-size: 20px;
+    opacity: 0.8;
+}
+
+.circle{
+    width: 44px;
+    height: 44px;            
+}
+
+
+
+.numColor{
+    color: #373737;
+}
+
+
+
+.trashCan{
+    width: 15px;
+    height: 15px;
+}
+
+
+/* Night Mode */
+.styleNM{
+    background: #191A1E;
+    box-shadow: 6px 6px 12px #0E0E0E, -4px -4px 10px rgba(95, 94, 94, 0.25);
+    color: white;
+}
+
+.screenNM{
+    background-color: #191A1E;
+    background: #191A1E;
+    box-shadow: inset 1.5px 1.5px 3px #0E0E0E, inset -1.5px -1.5px 3px #5F5E5E;
+}
+
+/* Night Mode */
+
+.ariOpeColor{
+    color: #2D98DA;
+}
+
+.zero{
+    width: 107px;
+    height: 44px;
+    color: #F7B731;
+    grid-area: 5 / 1 / 6 / 3;
+}
+
+.equal{
+    width: 44px;
+    height: 170px;
+    color: #20BF6B;
+    grid-area: 3 / 4 / 6 / 5;
+}
