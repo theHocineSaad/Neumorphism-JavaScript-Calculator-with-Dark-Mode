@@ -9,7 +9,7 @@
 
 # Neumorphism/Soft UI JavaScript Calculator | Dark mode ON/OFF
 
-A very simple Calculator made using HTML, CSS and JavaScript with Neumorphism/Soft UI style + a toggle button to activate or deactivate Dark Mode..
+A very simple Calculator made using HTML, CSS and JavaScript with Neumorphism/Soft UI style + a toggle button to activate or deactivate Dark Mode.
 
 ## Live Preview
 
