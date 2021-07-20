@@ -112,6 +112,7 @@ body{
 
 #resultText{
     transition: color .5s ease-in-out;
+    cursor: copy;
 }
 
 .resultTextNM{
